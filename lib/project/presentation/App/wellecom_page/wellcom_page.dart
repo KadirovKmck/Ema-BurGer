@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shop_app/project/presentation/register%20screens/login_screen.dart';
 
 class WellcomPage extends StatelessWidget {
   const WellcomPage({Key? key}) : super(key: key);
@@ -10,31 +12,70 @@ class WellcomPage extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           body: Container(
-            width: double.infinity,
             height: double.infinity,
+            width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/lava.jpg',
-                  ),
-                  fit: BoxFit.cover),
-            ), 
-            child: Column( 
+                  image: AssetImage('assets/images/bu.jpg'), fit: BoxFit.cover),
+            ),
+            child: Column(
               children: [
-                Center(
-                  child: Text(
-                    'Ema BurGer',
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Borel'),
+                Text(
+                  'Wellcom',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.amber,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1,
+                    fontFamily: 'Borel',
+                    wordSpacing: 2,
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Text(
-                  'Welcome to Ema BurGer',
-                  style: TextStyle(color: Colors.white),
-                )
+                  'to Ema Burger',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.amber,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Borel',
+                    letterSpacing: 1,
+                    wordSpacing: 2,
+                  ),
+                ),
+                SizedBox(
+                  height: 490,
+                ),
+                Container(
+                  height: 60,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Center(
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(LoginScreen());
+                          },
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                                fontSize: 38,
+                                color: Colors.black54,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

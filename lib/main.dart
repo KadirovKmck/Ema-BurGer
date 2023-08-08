@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'project/presentation/App/wellecom_page/wellcom_page.dart';
 
@@ -11,7 +12,7 @@ class ShopAppMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: WellcomPage(),
     );
