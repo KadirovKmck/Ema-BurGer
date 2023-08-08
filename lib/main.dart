@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop_app/App/widget/bottom_sheet_sing_up_widget.dart';
 
-import 'project/presentation/App/wellecom_page/wellcom_page.dart';
+import 'project/wellecom_page/wellcom_page.dart';
 
 void main(List<String> args) {
   runApp(ShopAppMobile());
@@ -14,7 +15,8 @@ class ShopAppMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WellcomPage(),
+      // home: WellcomPage(),
+      home: BottomSheetSingUpWidget(),
     );
   }
 }
