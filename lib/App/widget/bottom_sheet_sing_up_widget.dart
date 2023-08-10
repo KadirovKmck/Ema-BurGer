@@ -50,6 +50,9 @@ class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll(
+                                    Color(0xffFF785B))),
                             child: Column(
                               children: [
                                 TextFieldWidget(),
