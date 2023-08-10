@@ -13,10 +13,10 @@ class ShopAppMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: WellcomPage(),
-      home: BottomSheetSingUpWidget(),
+      home: WellcomPage(),
+      // home: BottomSheetSingUpWidget(),
     );
   }
 }

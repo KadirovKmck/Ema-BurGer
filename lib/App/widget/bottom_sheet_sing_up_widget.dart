@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/App/widget/textfild_widget.dart';
 
 class BottomSheetSingUpWidget extends StatefulWidget {
   BottomSheetSingUpWidget({Key? key}) : super(key: key);
@@ -16,13 +17,25 @@ class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
       children: [
         ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(Colors.amber),
-          ,
-          ),
+              backgroundColor: MaterialStatePropertyAll(Color(0xffFF785B)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(33),
+                          topRight: Radius.circular(33))))),
           child: SizedBox(
             width: 330,
             height: 68,
-            child: Text('data'),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.expand_less_outlined),
+                Text(
+                  'Sign Up',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
           ),
           onPressed: () {
             showModalBottomSheet<void>(
@@ -37,7 +50,14 @@ class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           ElevatedButton(
-                            child: const Text('Close BottomSheet'),
+                            child: Column(
+                              children: [
+                                TextFieldWidget(),
+                                TextFieldWidget(),
+                                TextFieldWidget(),
+                                TextFieldWidget(),
+                              ],
+                            ),
                             onPressed: () {},
                           ),
                         ],

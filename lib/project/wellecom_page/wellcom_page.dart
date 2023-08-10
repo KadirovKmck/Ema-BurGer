@@ -62,7 +62,10 @@ class WellcomPage extends StatelessWidget {
                       Center(
                         child: InkWell(
                           onTap: () {
-                            Get.to(LoginScreen());
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginScreen()));
                           },
                           child: Text(
                             'Next',
