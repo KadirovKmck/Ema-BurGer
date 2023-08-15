@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:shop_app/App/widget/bottom_sheet_sing_up_widget.dart';
 
 import 'project/wellecom_page/wellcom_page.dart';
 
@@ -14,6 +12,7 @@ class ShopAppMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // theme: ThemeData(useMaterial3: true, primarySwatch: Colors.yellow),
       debugShowCheckedModeBanner: false,
       home: WellcomPage(),
       // home: BottomSheetSingUpWidget(),

@@ -10,6 +10,7 @@ class BottomSheetSingUpWidget extends StatefulWidget {
 }
 
 class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
+  double _currentSliderValue = 20;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -51,14 +52,38 @@ class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
                         children: <Widget>[
                           ElevatedButton(
                             style: ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll(
-                                    Color(0xffFF785B))),
+                              backgroundColor: MaterialStatePropertyAll(
+                                Color(0xffFF785B),
+                              ),
+                            ),
                             child: Column(
                               children: [
+                                Text(
+                                  '~~~',
+                                  style: TextStyle(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
                                 TextFieldWidget(),
+                                SizedBox(
+                                  height: 30,
+                                ),
                                 TextFieldWidget(),
+                                SizedBox(
+                                  height: 30,
+                                ),
                                 TextFieldWidget(),
+                                SizedBox(
+                                  height: 30,
+                                ),
                                 TextFieldWidget(),
+                                SizedBox(
+                                  height: 30,
+                                ),
                               ],
                             ),
                             onPressed: () {},
