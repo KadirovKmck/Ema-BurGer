@@ -10,94 +10,156 @@ class BottomSheetSingUpWidget extends StatefulWidget {
 }
 
 class _BottomSheetSingUpWidgetState extends State<BottomSheetSingUpWidget> {
-  double _currentSliderValue = 20;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        ElevatedButton(
-          style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Color(0xffFF785B)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(33),
-                          topRight: Radius.circular(33))))),
-          child: SizedBox(
-            width: 330,
-            height: 68,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.expand_less_outlined),
-                Text(
-                  'Sign Up',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-                ),
-              ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Color(0xffFF785B)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(33),
+                            topRight: Radius.circular(33))))),
+            child: SizedBox(
+              width: 330,
+              height: 68,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.expand_less_outlined),
+                  Text(
+                    'Sign Up',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                  ),
+                ],
+              ),
             ),
-          ),
-          onPressed: () {
-            showModalBottomSheet<void>(
-              context: context,
-              builder: (BuildContext context) {
-                return SizedBox(
-                  height: 600,
-                  child: Center(
-                    child: SizedBox(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                Color(0xffFF785B),
-                              ),
-                            ),
-                            child: Column(
+            onPressed: () {
+              showModalBottomSheet<void>(
+                backgroundColor: Color(0xffFBEDEA),
+                elevation: 1000,
+                context: context,
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    height: 900,
+                    child: Center(
+                      child: SizedBox(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Column(
                               children: [
+                                Container(
+                                  width: 38,
+                                  child: Divider(
+                                    thickness: 2,
+                                    color: Color(0xffFF785B),
+                                  ),
+                                ),
                                 Text(
-                                  '~~~',
+                                  'Sing Up',
                                   style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w800,
+                                    color: Color(0xffFF785B),
+                                  ),
                                 ),
-                                SizedBox(
-                                  height: 30,
+                                Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: TextFieldWidget(
+                                    hinText: 'Your Name',
+                                  ),
                                 ),
-                                TextFieldWidget(),
-                                SizedBox(
-                                  height: 30,
+                                Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: TextFieldWidget(
+                                    hinText: 'Enter Your Email',
+                                  ),
                                 ),
-                                TextFieldWidget(),
-                                SizedBox(
-                                  height: 30,
+                                Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: TextFieldWidget(
+                                    hinText: 'Enter Your Password',
+                                  ),
                                 ),
-                                TextFieldWidget(),
-                                SizedBox(
-                                  height: 30,
+                                Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: TextFieldWidget(
+                                    hinText: 'Enter Your Confirm Password ',
+                                  ),
                                 ),
-                                TextFieldWidget(),
-                                SizedBox(
-                                  height: 30,
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 110, vertical: 14),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: Color(0xffFF785B)),
+                                  child: const Text(
+                                    'Never Hungry Again!',
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w900,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 35,
+                                ),
+                                // description Sign in with
+                                const Text(
+                                  'or Sing Up with',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromRGBO(153, 154, 153, 0.90),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                                const SizedBox(
+                                  height: 55,
+                                ),
+                                //login with facebook and google
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    InkWell(
+                                      onTap: () {},
+                                      child: const CircleAvatar(
+                                        backgroundImage: AssetImage(
+                                            'assets/images/facebook.png'),
+                                        radius: 15,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 25,
+                                    ),
+                                    InkWell(
+                                      onTap: () {},
+                                      child: const CircleAvatar(
+                                        backgroundImage: AssetImage(
+                                            'assets/images/google.png'),
+                                        radius: 15,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                            onPressed: () {},
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                );
-              },
-            );
-          },
-        ),
-      ],
+                  );
+                },
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

@@ -48,35 +48,29 @@ class WellcomPage extends StatelessWidget {
                 SizedBox(
                   height: 490,
                 ),
-                Container(
-                  height: 60,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30),
-                    ),
-                  ),
-                  child: Column(
-                    children: [
-                      Center(
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()));
-                          },
-                          child: Text(
-                            'Next',
-                            style: TextStyle(
-                                fontSize: 38,
-                                color: Colors.black54,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
                       ),
-                    ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Next',
+                        style: TextStyle(
+                            fontSize: 38,
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
                   ),
                 ),
               ],
