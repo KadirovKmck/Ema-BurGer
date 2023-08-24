@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/project/Wishlist/Wishlist_page.dart';
+import 'package:shop_app/App/presentation/Wishlist/Wishlist_page.dart';
 
 class NavbarPage extends StatefulWidget {
   const NavbarPage({Key? key}) : super(key: key);

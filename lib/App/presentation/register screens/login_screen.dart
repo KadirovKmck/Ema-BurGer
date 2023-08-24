@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/App/widget/alerd_dialog.dart';
 import 'package:shop_app/App/widget/bottom_sheet_sing_up_widget.dart';
 import 'package:shop_app/App/widget/textfild_widget.dart';
-import 'package:shop_app/project/cart/cart_page.dart';
-import 'package:shop_app/project/presentation/NEW%20PASSWORD%20PAGE/new%20_Password_Page.dart';
+import 'package:shop_app/App/presentation/cart/cart_page.dart';
+import 'package:shop_app/App/presentation/NEW%20PASSWORD%20PAGE/new%20_Password_Page.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

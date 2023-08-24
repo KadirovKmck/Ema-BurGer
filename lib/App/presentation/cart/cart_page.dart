@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/App/constants/colors.dart';
 import 'package:shop_app/App/widget/cart%20widget/cart_widget.dart';
-import 'package:shop_app/project/drower/drower_page.dart';
+import 'package:shop_app/App/presentation/drower/drower_page.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);

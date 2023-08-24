@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop_app/project/presentation/register%20screens/login_screen.dart';
+import 'package:shop_app/App/presentation/register%20screens/login_screen.dart';
 
 class WellcomPage extends StatelessWidget {
   const WellcomPage({Key? key}) : super(key: key);

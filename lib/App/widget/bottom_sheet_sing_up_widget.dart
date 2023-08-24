@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/App/widget/textfild_widget.dart';
-import 'package:shop_app/project/menus/menu_page.dart';
+import 'package:shop_app/App/presentation/menus/menu_page.dart';
 
 class BottomSheetSingUpWidget extends StatefulWidget {
   BottomSheetSingUpWidget({Key? key}) : super(key: key);

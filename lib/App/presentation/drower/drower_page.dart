@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/App/constants/colors.dart';
 import 'package:shop_app/App/constants/sizdBox.dart';
 import 'package:shop_app/App/constants/style.dart';
-import 'package:shop_app/project/Wishlist/Wishlist_page.dart';
+import 'package:shop_app/App/presentation/Wishlist/Wishlist_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);

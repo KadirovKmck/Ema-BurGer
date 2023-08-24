@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/project/drower/drower_page.dart';
+import 'package:shop_app/App/presentation/drower/drower_page.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({Key? key}) : super(key: key);
